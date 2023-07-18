@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const email =["emmanuelgodi95@gmail.com"];
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 passport.use(
     "auth-google",
