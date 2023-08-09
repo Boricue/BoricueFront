@@ -1,6 +1,7 @@
 {
-  "name": "front",
+  "name": "boricue",
   "version": "1.0.0",
+  "description": "Proyecto realizado para el manejo de residuos, hecho por Emanuel Gómez Diaz para uso del SENA, durante su etapa como monitor.",
   "main": "index.js",
   "scripts": {
     "install": "npm i -D @babel/plugin-transform-runtime",
@@ -9,29 +10,32 @@
     "dev": "nodemon app/index.js --exec babel-node",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": [
+    "Sena",
+    "residuos"
+  ],
+  "author": "Emanuel Gomez Diaz, SENA",
   "license": "ISC",
+  "type": "module",
   "dependencies": {
     "body-parser": "^1.20.2",
     "colors": "^1.4.0",
-    "cookie-parser": "^1.4.6",
-    "dotenv": "^16.0.3",
+    "connect-flash": "^0.1.1",
+    "csurf": "^1.11.0",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "html-pdf": "^3.0.1",
-    "jsonwebtoken": "^9.0.0",
-    "node-fetch": "^2.6.11",
-    "nodemon": "^2.0.22",
+    "express-session": "^1.17.3",
+    "firebase": "^10.1.0",
     "passport": "^0.6.0",
-    "passport-google-oauth20": "^2.0.0",
-    "path": "^0.12.7"
+    "passport-local": "^1.0.0"
   },
-  "description": "",
   "devDependencies": {
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
     "@babel/node": "^7.22.6",
-    "@babel/plugin-transform-runtime": "^7.22.9",
-    "@babel/preset-env": "^7.22.9"
+    "@babel/plugin-transform-runtime": "^7.22.10",
+    "@babel/preset-env": "^7.22.9",
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.1"
   }
 }

@@ -1,0 +1,84 @@
+<!-- Start Main Top -->
+<header class="main-header">
+    <!-- Start Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-default bootsnav">
+        <div class="container NavBarTop">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+                <a class="navbar-brand" href="/"><img src="images/LogoBoricueCircular.png" width="100px" height="100px" class="logo" alt=""></a>
+            </div>
+            <!-- End Header Navigation -->
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/acerca">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contactanos">Contactanos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/preguntas">Preguntas</a></li>  
+                    <li class="nav-item"><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signinModal">Ingresa</a></li>  
+                    <li class="nav-item"><a class="nav-link logged-out" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Registrarse</a></li>
+                    <li class="nav-item"><a class="nav-link logged-in" href="#" id="logout">Salir</a></li>  
+                </ul>
+            </div>
+        </div> 
+    </nav>
+    <!-- End Navigation -->
+
+    <!-- Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark">
+      <div class="modal-header">
+        <h3>SignUp</h3>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-5">
+        <form id="signup-form">
+
+          <label for="email">Email:</label>
+          <input type="text" id="signup-email" class="form-control mb-3" placeholder="Title" required>
+
+          <label for="password">Password:</label>
+          <input type="password" id="signup-password" class="form-control mb-3" placeholder="Password" required>
+
+          <button type="submit" class="btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalSignin"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>SignIn</h3>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="login-form">
+          <label for="email">Email</label>
+          <input type="text" id="login-email" class="form-control mb-3" placeholder="Title" required>
+          <label for="password">Password:</label>
+          <input type="password" id="login-password" class="form-control mb-3" placeholder="Password" required>
+
+          <button type="submit" class="btn btn-success w-100 mb-4">Login</button>
+
+          <button type="button" class="btn btn-info" id="googleLogin">Google</button>
+          <button type="button" class="btn btn-primary" id="facebookLogin">Facebook</button>
+          <button type="button" class="btn btn-dark" id="githubLogin">Github</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>
+<!-- End Main Top -->

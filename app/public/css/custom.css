@@ -1,0 +1,75 @@
+  .containerLogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-tab, .register-tab {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  /* Estilos responsive */
+  @media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .login-tab, .register-tab {
+      margin-bottom: 20px;
+    }
+  }
+  
+
+.NavBarTop{
+	height: 100px;
+}
+
+.BotonesSlider{
+    border: 2px solid #ffffff;
+    border-radius: 100px;
+}
+
+.IconosLateralesPServicios{
+    display: flex!important;
+    flex-direction: row-reverse;
+}
