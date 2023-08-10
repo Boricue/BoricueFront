@@ -9,16 +9,19 @@ googleButton.addEventListener("click", async (e) => {
 
   const provider = new GoogleAuthProvider();
   try {
-    const credentials = await signInWithPopup(auth, provider)
+    const credentials = await signInWithPopup(auth, provider);
     console.log(credentials);
     console.log("google sign in");
-    
-    // Close the login modal
-    const modalInstance = bootstrap.Modal.getInstance(googleButton.closest('.modal'));
-    modalInstance.hide();
 
-    // show welcome message
+    // Close the login modal
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'none';
+
+    // Show welcome message
     showMessage("Welcome " + credentials.user.displayName);
+
+    // Redirect to another page
+    window.location.href = '/DashHome'; // Cambia '/dashboard' por la URL de la página a la que deseas redirigir
   } catch (error) {
     console.log(error);
   }

@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'path';
 import colors from 'colors';
 import { fileURLToPath } from 'url';
-import homeRoutes from './routes/home.js'; // Cambia la ruta de importación
+import homeRoutes from './routes/routes.js'; // Cambia la ruta de importación
 
 const app = express();
 

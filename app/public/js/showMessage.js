@@ -1,7 +1,7 @@
 export function showMessage(message, type = "success") {
   Toastify({
     text: message,
-    duration: 3000,
+    duration: 10000,
     destination: "https://github.com/apvarun/toastify-js",
     newWindow: true,
     close: true,

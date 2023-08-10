@@ -1,4 +1,5 @@
-// routes.js
+// HOMEPAGE //
+
 import express from 'express';
 
 const router = express.Router();
@@ -21,6 +22,12 @@ router.get('/preguntas', (req, res) => {
 
 router.get('/servicios', (req, res) => {
     res.render('servicios');
+});
+
+//DASHBOARD//
+
+router.get('/DashHome', (req, res) => {
+    res.render('dashHome');
 });
 
 export default router;

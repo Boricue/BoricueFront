@@ -14,8 +14,8 @@ githubButton.addEventListener("click", async (e) => {
     console.log("google sign in");
     
     // Close the login modal
-    const modalInstance = bootstrap.Modal.getInstance(githubButton.closest('.modal'));
-    modalInstance.hide();
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'none';
 
     // show welcome message
     showMessage("Welcome " + credentials.user.displayName);

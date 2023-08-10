@@ -14,8 +14,8 @@ signInForm.addEventListener("submit", async (e) => {
     console.log(userCredentials)
 
     // Close the login modal
-    const modal = bootstrap.Modal.getInstance(signInForm.closest('.modal'));
-    modal.hide();
+    const modal = document.querySelector('.modal');
+    modal.style.display = 'none';
 
     // reset the form
     signInForm.reset();
