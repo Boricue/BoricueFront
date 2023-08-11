@@ -21,7 +21,7 @@ googleButton.addEventListener("click", async (e) => {
     showMessage("Welcome " + credentials.user.displayName);
 
     // Redirect to another page
-    window.location.href = '/DashHome'; // Cambia '/dashboard' por la URL de la página a la que deseas redirigir
+    window.location.href = '/Inicio';
   } catch (error) {
     console.log(error);
   }
