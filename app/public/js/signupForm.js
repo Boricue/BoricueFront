@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
+import { createUserWithEmailAndPassword, setPersistence, browserLocalPersistence } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
 import { auth } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 
@@ -10,6 +10,8 @@ signUpForm.addEventListener("submit", async (e) => {
   const password = signUpForm["signup-password"].value;
 
   try {
+    await setPersistence(auth, browserLocalPersistence);
+
     const userCredential = await createUserWithEmailAndPassword(auth, email, password)
     console.log(userCredential)
 
@@ -22,7 +24,10 @@ signUpForm.addEventListener("submit", async (e) => {
     signUpForm.reset();
 
     // show welcome message
-    showMessage("Welcome" + userCredentials.user.email);
+    showMessage("Welcome" + userCredential.user.email);
+
+    // Redirect to another page
+    window.location.href = "/Inicio"; // Replace with the actual URL
 
   } catch (error) {
     if (error.code === 'auth/email-already-in-use') {

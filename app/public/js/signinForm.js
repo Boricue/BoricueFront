@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
+import { signInWithEmailAndPassword , setPersistence, browserLocalPersistence} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
 import { auth } from "./firebase.js";
 import { showMessage } from "./showMessage.js";
 
@@ -10,6 +10,8 @@ signInForm.addEventListener("submit", async (e) => {
   const password = signInForm["login-password"].value;
 
   try {
+    await setPersistence(auth, browserLocalPersistence);
+
     const userCredentials = await signInWithEmailAndPassword(auth, email, password)
     console.log(userCredentials)
 
@@ -20,8 +22,12 @@ signInForm.addEventListener("submit", async (e) => {
     // reset the form
     signInForm.reset();
 
-    // show welcome message
-    showMessage("Welcome" + userCredentials.user.email);
+    // Show welcome message
+    showMessage("Welcome " + credentials.user.email);
+
+    // Redirect to another page
+    window.location.href = "/Inicio"; // Replace with the actual URL
+
   } catch (error) {
     if (error.code === 'auth/wrong-password') {
       showMessage("Wrong password", "error")
